@@ -1,0 +1,124 @@
+.client
+  position: relative
+  min-height: 650px
+  display: flex
+  flex-direction: column
+  font-family: Myriad Pro,sans-serif
+  font-size: 16px
+  background: url(../../img/m_bg.png) no-repeat
+  background-size: cover
+  color: #fff
+  padding-bottom: 103px
+  overflow: hidden
+  b
+    color: #ff0036
+  &__h
+    font-family: Raleway, sans-serif
+    font-size: 20px
+    text-align: center
+    padding-top: 100px
+    padding-bottom: 45px
+    color: #fff
+    text-transform: uppercase
+  &__p
+    text-align: center
+    margin-bottom: 100px
+    color: #fff
+.client::after
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  min-height: 650px
+  background: rgba(0,0,0,0.8)
+.client__main
+  display: flex
+  justify-content: space-around
+.client__top,.client__main
+  z-index: 55
+.client__message
+  width: 577px
+.slick-dots li
+  margin: 0
+.slick-dots li button:before
+  content: ''
+  width: 10px
+  height: 10px
+  background: #fff
+  opacity: 1
+.slick-dots li.slick-active button:before
+  background: #ff0036
+.hexagon_avatar
+  width: 65px
+  height: 57px
+  margin-bottom: 15px
+  margin-top: 50px
+.img__avatar
+  background: url(../../img/avatar.png) no-repeat
+  visibility: visible
+  width: 100%
+  height: 100%
+  transform: rotate(-60deg)
+  background-position: center
+.message__name
+  font-size: 16px
+  text-transform: uppercase
+  color: #ff0036
+  margin-bottom: 45px
+  font-weight: bold
+.message__h
+  font-size: 20px
+  text-transform: uppercase
+  color: #fff
+  margin-bottom: 50px
+.client__message1
+  display: flex
+  justify-content: space-around
+  width: 540px
+  flex: 1 50%
+.message__block
+  display: flex
+  justify-content: center
+  text-align: center
+.slick
+  display: flex
+  width: 540px
+  justify-content: center
+.slick-dotted.slick-slider
+  margin-bottom: 0px
+.slick-dots
+  bottom: 0px
+.client__clientslogo
+  display: flex
+  width: 575px
+  flex-wrap: wrap
+  justify-content: space-between
+.clientslogo
+  width: 270px
+  height: 116px
+  align-self: center
+  background: url(../../img/img1.png) no-repeat
+.clientslogo:nth-child(2)
+  background: url(../../img/img2.png) no-repeat
+.clientslogo:nth-child(3)
+  background: url(../../img/img3.png) no-repeat
+.clientslogo:nth-child(4)
+  background: url(../../img/img4.png) no-repeat
+@media (max-width: 1245px)
+  .client__message
+    width: 400px
+@media (max-width: 1065px)
+  .client__main
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .client__message
+    width: 90%
+  .client__clientslogo
+    width: 70%
+    justify-content: space-around
+  .clientslogo
+    margin-top: 50px
+@media (max-width: 900px)
+  .client__clientslogo
+    width: 85%

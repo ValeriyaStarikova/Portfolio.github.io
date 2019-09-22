@@ -1,0 +1,179 @@
+.header
+  width: 100%
+  overflow: hidden
+  &__logo
+    width: 250px
+    height: 120px
+    background: url(../../img/logo.png) no-repeat
+    position: absolute
+    margin-left: 10%
+    z-index: 55
+  &__menu
+    width: 100%
+    height: 67px
+    background: black
+    opacity: 0.8
+    position: absolute
+    z-index: 5
+.top__menu
+  display: flex
+  justify-content: flex-end
+  color: #fff
+  list-style: none
+  margin: 0
+  padding: 0
+  height: 100%
+  margin-right: 10%
+  align-items: center
+  &--item
+    margin-right: 20px
+    font-family: Raleway
+    font-size: 18px
+    text-transform: uppercase
+    height: 50%
+    display: flex
+    align-items: center
+  &--item:hover
+    border-top: 2px solid #ff0036
+    border-bottom: 2px solid #ff0036
+    cursor: pointer
+.slide__text
+  width: 80%
+  margin: auto
+  margin-top: 50vh
+  font-size: 16px
+  color: white
+  text-align: center
+  font-family: Raleway
+  h2
+    font-size: 30px
+  b
+    color: #ff0036
+  p
+    margin-top: 50px
+    margin-bottom: 50px
+  a
+    width: 170px
+    height: 50px
+    display: inline-flex
+    justify-content: center
+    align-items: center
+    background: #131313
+    color: white
+    text-decoration: none
+    font-size: 20px
+    text-transform: uppercase
+  a:hover
+    cursor: pointer
+    background: #ff0036
+  .first__bt
+    margin-right: 18px
+.slide1,.slide2,.slide3
+  background: url(../../img/slide.png) no-repeat
+  background-size: cover
+  background-position: center
+  height: 100vh
+.slick-prev
+  background: url(../../img/prev.png) no-repeat
+  background-position: center
+  left: 30px
+  top: 60vh
+  height: 50px
+  z-index: 3
+.slick-prev:hover
+  background: url(../../img/prevcolor.png) no-repeat
+  cursor: pointer
+  background-position: center
+.slick-next
+  background: url(../../img/nextncolor.png) no-repeat
+  background-position: center
+  height: 50px
+  top: 60vh
+  right: 30px
+.slick-next:hover
+  background: url(../../img/next.png) no-repeat
+  background-position: center
+  cursor: pointer
+.slick-prev::before,.slick-next::before
+  content: ' '
+.hidemenu__button
+  width: 30px
+  height: 30px
+  position: absolute
+  right: 20px
+  top: 20px
+  z-index: 99
+  cursor: pointer
+  span,span::before,
+  span::after
+    width: 30px
+    height: 2px
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    background-color: #dc0004
+    border-radius: 30px
+    transition: 0.5s
+  span::before,
+  span::after
+    content: ''
+  span::before
+    transform: translateY(-10px)
+  span::after
+    transform: translateY(10px)
+.hidemenu__button--active
+  span::before
+    background-color: white
+    transform: rotate(45deg)
+  span::after
+    background-color: white
+    transform: rotate(-45deg)
+  span
+    height: 0
+.hidemenu__button
+  display: none
+@media (max-width: 1320px)
+  .top__menu
+    margin-right: 1%
+  .header__logo
+    margin-left: 3%
+@media (max-width: 1070px)
+  .hidemenu__button
+    display: block
+  .header__slider--active
+    transform: translateX(-300px)
+  .header__logo--active
+    transition: 0.5s
+    transform: translateX(-300px)
+  .header__menu
+    width: 300px
+    height: 100vh
+    right: 0
+    transition: 0.5s
+    display: none
+    transform: translateX(-100%)
+  .header__menu--active
+    display: block
+    transform: translateX(0%)
+    transition: 0.5s
+  .top__menu
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .top__menu--item
+    height: 10%
+@media (max-width: 768px)
+  .slide__text
+    margin-top: 30vh
+    p
+      margin: 50px
+      font-size: 13px
+      line-height: 15px
+@media (max-width: 568px)
+  .slide__text
+    a
+      width: 115px
+@media (max-width: 425px)
+  .slide__text
+    p
+      font-size: 11px

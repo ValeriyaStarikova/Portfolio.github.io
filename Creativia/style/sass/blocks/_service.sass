@@ -1,0 +1,80 @@
+.service
+  background: #272727
+.service__main
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+.service__item
+  width: 572px
+  height: 214px
+  margin-bottom: 60px
+.item__top
+  display: flex
+  align-items: center
+  &--h
+    font-family: Raleway,sans-serif
+    font-size: 20px
+    text-transform: uppercase
+    margin-left: 33px
+    color: #fff
+    font-weight: normal
+  .item__img
+    background: #a4a4a4
+    transition: 1s
+.service__item:nth-child(1) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/i1.png) no-repeat
+  background-position: center
+  filter: brightness(0) invert(0)
+.service__item:nth-child(2) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/i2.png) no-repeat
+  background-position: center
+.service__item:nth-child(3) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/i3.png) no-repeat
+  background-position: center
+.service__item:nth-child(4) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/icon3.png) no-repeat
+  background-position: center
+.service__item:nth-child(5) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/i5.png) no-repeat
+  background-position: center
+.service__item:nth-child(6) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/i6.png) no-repeat
+  background-position: center
+.item__text
+  background: #343434
+  color: #8f8f8f
+  transition: 1s
+  p
+    font-family: sans-serif
+    font-size: 16px
+    padding-left: 39px
+    padding-right: 30px
+    padding-top: 34px
+    padding-bottom: 34px
+.service__item:hover
+  .item__text
+    background: #3d2329
+    color: #fff
+    cursor: pointer
+    transition: 1s
+  .item__img
+    transition: 1s
+    background: #ff0036
+  .item__img:before
+    filter: brightness(0) invert(1)
+@media (max-width: 610px)
+  .service__item
+    width: 472px
+    margin-bottom: 75px

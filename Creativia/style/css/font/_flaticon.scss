@@ -1,0 +1,100 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 12/03/2019 07:42
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-001-box:before { content: "\f100"; }
+.flaticon-002-box-1:before { content: "\f101"; }
+.flaticon-003-trolley:before { content: "\f102"; }
+.flaticon-004-boxes:before { content: "\f103"; }
+.flaticon-005-moving-truck:before { content: "\f104"; }
+.flaticon-006-moving-truck-1:before { content: "\f105"; }
+.flaticon-007-house:before { content: "\f106"; }
+.flaticon-008-checklist:before { content: "\f107"; }
+.flaticon-009-box-2:before { content: "\f108"; }
+.flaticon-010-box-3:before { content: "\f109"; }
+.flaticon-011-street-map:before { content: "\f10a"; }
+.flaticon-012-box-4:before { content: "\f10b"; }
+.flaticon-013-suitcase:before { content: "\f10c"; }
+.flaticon-014-moving-truck-2:before { content: "\f10d"; }
+.flaticon-015-moving:before { content: "\f10e"; }
+.flaticon-016-magnifying-glass:before { content: "\f10f"; }
+.flaticon-017-checklist-1:before { content: "\f110"; }
+.flaticon-018-packing:before { content: "\f111"; }
+.flaticon-019-garage:before { content: "\f112"; }
+.flaticon-020-moving-1:before { content: "\f113"; }
+.flaticon-021-moving-2:before { content: "\f114"; }
+.flaticon-022-moving-3:before { content: "\f115"; }
+.flaticon-023-sofa:before { content: "\f116"; }
+.flaticon-024-moving-4:before { content: "\f117"; }
+.flaticon-025-box-5:before { content: "\f118"; }
+.flaticon-026-boxes-1:before { content: "\f119"; }
+.flaticon-027-utilities:before { content: "\f11a"; }
+.flaticon-028-moving-5:before { content: "\f11b"; }
+.flaticon-029-contract:before { content: "\f11c"; }
+.flaticon-030-house-1:before { content: "\f11d"; }
+    
+    $font-Flaticon-001-box: "\f100";
+    $font-Flaticon-002-box-1: "\f101";
+    $font-Flaticon-003-trolley: "\f102";
+    $font-Flaticon-004-boxes: "\f103";
+    $font-Flaticon-005-moving-truck: "\f104";
+    $font-Flaticon-006-moving-truck-1: "\f105";
+    $font-Flaticon-007-house: "\f106";
+    $font-Flaticon-008-checklist: "\f107";
+    $font-Flaticon-009-box-2: "\f108";
+    $font-Flaticon-010-box-3: "\f109";
+    $font-Flaticon-011-street-map: "\f10a";
+    $font-Flaticon-012-box-4: "\f10b";
+    $font-Flaticon-013-suitcase: "\f10c";
+    $font-Flaticon-014-moving-truck-2: "\f10d";
+    $font-Flaticon-015-moving: "\f10e";
+    $font-Flaticon-016-magnifying-glass: "\f10f";
+    $font-Flaticon-017-checklist-1: "\f110";
+    $font-Flaticon-018-packing: "\f111";
+    $font-Flaticon-019-garage: "\f112";
+    $font-Flaticon-020-moving-1: "\f113";
+    $font-Flaticon-021-moving-2: "\f114";
+    $font-Flaticon-022-moving-3: "\f115";
+    $font-Flaticon-023-sofa: "\f116";
+    $font-Flaticon-024-moving-4: "\f117";
+    $font-Flaticon-025-box-5: "\f118";
+    $font-Flaticon-026-boxes-1: "\f119";
+    $font-Flaticon-027-utilities: "\f11a";
+    $font-Flaticon-028-moving-5: "\f11b";
+    $font-Flaticon-029-contract: "\f11c";
+    $font-Flaticon-030-house-1: "\f11d";

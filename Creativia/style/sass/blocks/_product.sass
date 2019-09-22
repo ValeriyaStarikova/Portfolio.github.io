@@ -1,0 +1,160 @@
+.product
+  &__block
+    font-family: Myriad Pro,sans-serif
+    font-size: 16px
+    b
+      color: #ff0036
+  &__h
+    font-size: 30px
+    text-align: center
+    padding-top: 100px
+  &__p
+    text-align: center
+    margin-bottom: 100px
+.product__main
+  display: flex
+  justify-content: center
+  margin-bottom: 100px
+.product__attribute1,.product__attribute2
+  width: 370px
+  height: 205px
+  margin-top: 76px
+.product__attribute1
+  .attribute__item p
+    justify-content: flex-end
+.attribute__item
+  display: flex
+  justify-content: flex-end
+  border: 1px solid gray
+  margin-bottom: 27px
+  transition: 1s
+  p
+    display: flex
+    width: 75%
+    text-transform: uppercase
+    justify-content: flex-start
+.product__main
+  .hexagon_p
+    width: 45px
+    height: 35px
+    margin-right: 25px
+  .img1
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #e7e7e7
+  .img1::before
+    content: '✔'
+    color: #262626
+.attribute__item:hover
+  background: #ff0036
+  border: 1px solid #ff0036
+  cursor: pointer
+  transition: 1s
+  p
+    color: #fff
+  .img1
+    background: #fff
+  .img1::before
+    content: '✔'
+    color: #ff0036
+.product__exampl
+  width: 475px
+  height: 593px
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  position: relative
+.img__ex
+  background: url(../../img/ex.png) no-repeat
+  background-size: cover
+  width: 400px
+  height: 521px
+  position: absolute
+  top: 0
+  z-index: 2
+.hex--bottom
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 0
+  width: 470px
+  border-top: 207px solid #262626
+  border-right: 100px solid transparent
+  border-left: 100px solid transparent
+  position: relative
+  z-index: 3
+  button
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: -200px
+    width: 170px
+    height: 50px
+    background: #494949
+    color: #fff
+    text-transform: uppercase
+    outline: none
+    border: none
+.hex--top
+  content: ''
+  position: absolute
+  height: 0
+  width: 276px
+  border-bottom: 207px solid #494949
+  border-right: 100px solid transparent
+  border-left: 100px solid transparent
+  bottom: 207px
+  z-index: 1
+@media (max-width: 1252px)
+  .product__attribute1
+    margin-left: 10px
+  .product__attribute2
+    margin-right: 10px
+@media (max-width: 1070px)
+  .product__main
+    flex-direction: column
+    align-items: center
+  .product__attribute1
+    margin-top: 0
+    margin-bottom: 76px
+    align-self: flex-start
+    margin-left: 3%
+  .product__attribute2
+    align-self: flex-end
+    margin-right: 3%
+@media (max-width: 500px)
+  .product__exampl
+    width: 375px
+    height: 493px
+  .img__ex
+    background-size: contain
+    width: 300px
+    height: 421px
+  .hex--top
+    width: 170px
+  .hex--bottom
+    top: -46px
+    border-top: 161px solid #262626
+  .hex--bottom
+    margin-top: -150px
+  .product__attribute1
+    margin: auto
+    margin-bottom: 76px
+  .product__attribute2
+    margin: auto
+    margin-top: 76px
+@media (max-width: 390px)
+  .product__exampl
+    width: 100%
+  .hex--top
+    display: none
+  .hex--bottom
+    border: 0px
+    button
+      width: 90%
+      height: 70px
+  .product__attribute1, .product__attribute2
+    width: 315px
+    margin: auto
+    margin-bottom: 76px

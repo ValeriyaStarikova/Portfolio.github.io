@@ -1,0 +1,45 @@
+.follow__block
+  height: 390px
+  background: url(../../img/slide.png) no-repeat
+  background-position: center
+  background-size: cover
+  .block__h
+    color: #fff
+  .block__top
+    margin-bottom: 45px
+.num__follow
+  font-size: 16px
+  color: #fff
+  margin-top: 35px
+.follow__block--main
+  display: flex
+  justify-content: center
+  align-items: center
+.item__follow
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.item__follow:nth-child(1) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/facebook.png) no-repeat
+  background-position: center
+.item__follow:nth-child(2) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/twitter.png) no-repeat
+  background-position: center
+.item__follow:nth-child(3) .item__img::before
+  content: ''
+  width: 100%
+  background: url(../../img/google.png) no-repeat
+  background-position: center
+.item__follow:hover
+  .item__img::before
+    filter: brightness(0) invert(1)
+    transition: 0.5s
+    cursor: pointer
+  .f__img
+    transition: 0.5s
+    background: #ff0036

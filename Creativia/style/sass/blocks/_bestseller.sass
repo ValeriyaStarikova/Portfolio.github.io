@@ -1,0 +1,65 @@
+.bestseller__main
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin: 0 -15px
+  margin-bottom: 100px
+.sell__item
+  width: 270px
+  display: flex
+  flex-direction: column
+  font-family: Myriad Pro,sans-serif
+  margin: 20px 15px
+  ul
+    margin: 0
+    padding: 0
+  li
+    height: 55px
+    text-align: center
+    display: flex
+    flex-direction: column
+    border: 2px solid #f2f2f2
+    border-top: none
+    color: #262626
+    box-sizing: border-box
+  h3
+    margin: auto
+    text-transform: uppercase
+    font-size: 24px
+  li:nth-child(1)
+    background: #000000
+    color: #fff
+    border: none
+    font-family: Raleway
+  li:nth-child(2)
+    height: 90px
+    background: #f2f2f2
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    border: none
+    h2
+      font-size: 50px
+      padding-right: 15px
+    p
+      font-size: 16px
+      margin-bottom: 0
+  a
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    width: 230px
+    height: 36px
+    background: #000000
+    color: #fff
+  li:last-child
+    justify-content: center
+    align-items: center
+    font-family: Raleway
+.sell__item:hover
+  cursor: pointer
+  li:nth-child(2),li:last-child a
+    background: #ff0036
+    transition: 0.5s
+    color: #fff
