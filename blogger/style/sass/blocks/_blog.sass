@@ -1,0 +1,35 @@
+.blog
+  background: url(../../img/Abract01.png) no-repeat
+  background-position: right
+  height: 100vh
+  width: 100%
+  background-size: 65%
+.blog__post
+  padding-top: 6rem
+.posts__content
+  display: flex
+  flex-direction: column
+  text-align: center
+  width: 80%
+  margin: 3rem 2rem
+  box-shadow: 0 15px 20px rgba(0,0,0,0.2)
+.posts__tittle
+  padding: 2rem 0
+.btn--post
+  padding: .7rem 2rem
+  background: $color-btn
+  color: $white
+  margin: .5rem
+.owl-theme .owl-dots, .owl-theme .owl-nav
+  position: absolute
+  margin: auto
+  top: 0px
+  width: 100%
+.owl-theme .owl-nav [class*=owl-],.owl-theme .owl-nav [class*=owl-]:hover
+  background: none
+  color: $text-color
+  outline: none
+  font-size: 50px
+@media only screen and (max-width:520px)
+  .blog
+    height: 125vh

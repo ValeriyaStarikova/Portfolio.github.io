@@ -1,0 +1,65 @@
+.category__list
+  font-family: 'Lexend', sans-serif
+  .list__item
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: .4rem 1rem
+    margin: .8rem 0
+    border-radius: 50px
+    width: 70%
+    background: $color-btn
+    color: $white
+    a
+      color: $white
+.sidebar
+  .post__content
+    padding: 1rem 0
+  .popular__post
+    h2
+      padding-top: 8rem
+  .post__info
+    padding: .4rem .1rem!important
+    bottom: 0rem!important
+    left: 31px
+    width: 70%
+    border-radius: 0rem
+    margin: 0
+    background: $white
+    color: $text-color
+.newsletter
+  .form__element
+    padding: .5rem 2rem
+    .input__element
+      width: 80%
+      height: 2.9rem
+      padding: .3rem .5rem
+      font-family: 'Lexend', sans-serif
+      font-size: 1rem
+      box-sizing: border-box
+    .form-btn
+      border-radius: 0
+      padding: .8rem 19%
+      margin: 1rem 0
+.popular__tags
+  padding: 4rem 0
+  .tags__item
+    background: $color-btn
+    color: $white
+    padding: .4rem 2rem
+    margin: .4rem .6rem
+    border-radius: 3rem
+@media only screen and (max-width:1000px)
+  .popular__post
+    .post__info
+      display: none
+@media only screen and (max-width:768px)
+  .popular__post
+    .post__info
+      display: flex
+  .newsletter
+    .form__element
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center

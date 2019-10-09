@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Josefin+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Lexend+Exa&display=swap')
+
+$text-color: #3f4954
+$text-light: #686676da
+$color-btn: #686676
+$bg-color: #0f0f0f
+$white: #ffffff
+$midnight: #104f55
+//$gradient: linear-gradient(120deg,#a1c4fd 0%.#c2e9fb 100%)
+
+
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  overflow-x: hidden
+  font-family: 'Abel', sans-serif
+main
+  overflow: hidden
+p
+  box-sizing: border-box
+  font-family: 'Josefin Sans', sans-serif
+  color: $text-light
+  font-size: 1rem
+a
+  text-decoration: none
+  color: $text-color
+ul
+  list-style: none
+h1,h2
+  font-family: 'Lexend', sans-serif
+  font-size: 2.5rem
+h3
+  font-family: 'Abel', sans-serif
+  font-size: 1.3rem
+span
+  display: block
+  font-family: 'Abel', sans-serif
+.container
+  margin: 0 5vw
+.btn
+  border: none
+  border-radius: 20px
+  padding: 1rem 3rem
+  font-size: 1.5rem
+  font-family: 'Abel', sans-serif
+  cursor: pointer
+.flex-row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+.text-gray
+  color: $text-color
+@media only screen and (max-width:768px)
+  .flex-row
+    justify-content: center
