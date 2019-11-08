@@ -1,0 +1,105 @@
+.services
+  display: flex
+  justify-content: space-between
+  margin-top: 119px
+  padding-bottom: 61px
+  border-bottom: 3px solid #ececec
+  .info__services
+    width: 516px
+    display: flex
+    flex-direction: column
+    h2
+      font-size: 42px
+      font-weight: bold
+      text-transform: uppercase
+    p
+      font-size: 16px
+      font-weight: 400
+  .button--services
+    border: 2px solid #ff0000
+    background: #ffffff
+    color: #ff6262
+  .block__services
+    max-width: 625px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    .item__services
+      width: 290px
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      margin-bottom: 50px
+      h6
+        font-size: 24px
+        font-weight: 600
+        margin-bottom: 27px
+      p
+        font-size: 16px
+        font-weight: 400
+      .icon
+        width: 50px
+        height: 50px
+        margin-bottom: 30px
+    .item__services:nth-child(1)
+      .icon
+        background: url(../../img/icon.png) no-repeat
+        background-position: 0px
+    .item__services:nth-child(2)
+      .icon
+        background: url(../../img/icon.png) no-repeat
+        background-position-x: -50px
+    .item__services:nth-child(3)
+      .icon
+        background: url(../../img/icon.png) no-repeat
+        background-position-x: -100px
+    .item__services:nth-child(3)
+      .icon
+        background: url(../../img/icon.png) no-repeat
+        background-position-x: -150px
+    .item__services:nth-child(4)
+      .icon
+        background: url(../../img/icon.png) no-repeat
+        background-position-x: -100px
+@media screen and (max-width: 1024px)
+  .main__wrapper
+    width: 95%
+  .services
+    .info__services
+      width: 35%
+    .block__services
+      width: 50%
+    .block__services
+      .item__services
+        width: 45%
+@media screen and (max-width: 1325px)
+  .main__wrapper
+    width: 95%
+  .services
+    .info__services
+      width: 35%
+    .block__services
+      width: 50%
+      .item__services
+        width: 47%
+@media screen and (max-width: 900px)
+  .services
+    .block__services
+      .item__services
+        width: 90%
+@media screen and (max-width: 768px)
+  .services
+    justify-content: center
+    flex-direction: column-reverse
+    .block__services
+      width: 100%
+      justify-content: center
+      margin: auto
+      .item__services
+        align-items: center
+        text-align: center
+    .info__services
+      width: 100%
+      text-align: center
+      align-items: center
+      margin-top: 50px

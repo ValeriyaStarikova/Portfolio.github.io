@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|PT+Serif&display=swap')
+@font-face 
+  font-family: 'Gotham Pro Medium'
+  src: url('..font/GothamPro-Medium.eot')
+  src: url('..font/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../font/GothamPro-Medium.woff') format('woff'),
+  url('../font/GothamPro-Medium.ttf') format('truetype')
+  font-weight: normal
+  font-style: normal
 
-$Open: 'Open Sans', sans-serif
-$Pt: 'PT Serif', serif
+
+$Gotham: 'Gotham Pro Medium', san-serif
 
 body
   margin: 0
@@ -11,17 +18,20 @@ body
   background: #E6F5F4
 main
   overflow: hidden
+  background: #0A0B0D
 h1
-  font-family: $Pt
-  font-style: normal
-  font-weight: bold
-  font-size: 40px
-  line-height: 56px
-  text-align: center
-  color: #009688
-  margin-bottom: 40px
+  width: 302px
+  height: 31px
+  margin-left: 32px
+  margin-bottom: 0
   margin-top: 72px
-h3
-  font-family: $Open
-  font-style: normal
-  font-weight: bold
+  font-family: $Gotham
+  font-size: 32px
+  color: #FFFFFF
+p
+  width: 231px
+  height: 31px
+  font-family: $Gotham
+  font-size: 24px
+  line-height: 130%
+  color: #FFFFFF

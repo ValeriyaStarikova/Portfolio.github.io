@@ -10,7 +10,7 @@ $(document).ready(function(){
 		appendDots: $('.controls-dots'),
     responsive: [
     {
-      breakpoint: 1201,
+      breakpoint: 1280,
       settings: {
         slidesPerRow:3,
         rows: 2

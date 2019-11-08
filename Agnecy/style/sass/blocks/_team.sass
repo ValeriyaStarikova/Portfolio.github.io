@@ -1,0 +1,134 @@
+.team
+  max-width: 1323px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  margin: auto
+  margin-top: 135px
+  margin-bottom: 110px
+.team__info
+  margin-bottom: 70px
+  width: 456px
+  h6
+    font-size: 42px
+    font-weight: bold
+    text-transform: uppercase
+  p
+    margin-top: 45px
+    margin-bottom: 33px
+    font-size: 16px
+    font-weight: 400
+    margin-left: 10px
+    line-height: 30px
+  hr
+    width: 130px
+    height: 3px
+    background: #ff2d2d
+    margin-left: 10px
+.team__members
+  display: flex
+  justify-content: space-between
+  align-items: flex-end
+.team__member
+  display: flex
+  width: 197px
+  height: 214px
+  background: #f5f0dd
+  overflow: hidden
+  .member__name
+    align-self: flex-end
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 37px
+    background: rgba(0, 0, 0, .5)
+    text-align: center
+    transform: translateY(38px)
+    transition: 0.5s
+    p
+      font-size: 18px
+      font-weight: 500
+      color: #ffffff
+      text-transform: uppercase
+  .member__bio
+    display: none
+    transition: 1s
+    opacity: 0
+.team__member--active
+  width: 321px
+  height: 458px
+  margin-right: 78px
+  order: -1
+  .member__name
+    display: none
+  .member__bio
+    display: block
+    position: absolute
+    width: 635px
+    margin-left: 433px
+    transition: 1s
+    opacity: 1
+    h3
+      font-size: 30px
+      font-weight: 800
+      text-transform: uppercase
+      margin-bottom: 30px
+    p
+      font-size: 16px
+      font-weight: 400
+    .soc
+      display: flex
+      margin-top: 50px
+      .soc__item
+        font-size: 18px
+        margin-right: 33px
+        color: #000000
+        font-style: italic
+      .soc__item:last-child
+        margin-right: 0
+.team__member:hover
+  cursor: pointer
+  .member__name
+    transform: translateY(0px)
+    transition: 0.5s
+@media screen and (max-width: 1323px)
+  .team
+    width: 95%
+  .team__member
+    width: 17%
+  .team__member--active
+    margin-right: 1%
+    width: 26%
+  .team__member--active .member__bio
+    width: 42%
+    margin-left: 27%
+@media screen and (max-width: 768px)
+  .team
+    flex-direction: column
+    flex-wrap: wrap
+    margin: auto
+    margin-top: 135px
+    margin-bottom: 110px
+  .team__members
+    flex-wrap: wrap
+    justify-content: space-evenly
+    width: 100%
+  .team__member
+    margin-bottom: 30px
+    width: 192px
+  .team__member--active
+    width: 95%
+    margin-right: 0
+    margin-bottom: 80px
+    margin-top: 200px
+  .team__member--active .member__bio
+    width: 90%
+    margin-top: -235px
+    margin-left: 0px
+  .team__member--active .member__bio .soc .soc__item
+    font-size: 13px
+    margin-right: 31px
+@media screen and (max-width: 478px)
+  .team__info
+    width: 90%

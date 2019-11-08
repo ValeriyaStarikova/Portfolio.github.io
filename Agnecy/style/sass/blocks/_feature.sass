@@ -1,0 +1,67 @@
+.feature
+  display: flex
+  align-items: center
+  flex-direction: column
+.feature__info
+  width: 510px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 110px
+  h6
+    font-size: 42px
+    font-weight: bold
+    text-transform: uppercase
+  p
+    font-size: 16px
+    font-weight: 400
+    margin-top: 32px
+    margin-bottom: 32px
+    text-align: center
+    line-height: 30px
+  hr
+    width: 130px
+    height: 3px
+    background: #ff2d2d
+    margin-bottom: 92px
+.products__menu
+  margin-bottom: 65px
+  text-align: center
+  .product__item
+    font-size: 22px
+    font-weight: 800
+    text-transform: uppercase
+    color: #000000
+    margin-right: 55px
+  .product__item--active,.product__item:hover
+    color: #ff2d2d
+    cursor: pointer
+  .product__item:last-child
+  margin-right: 0px
+.products__content
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+  .product
+    width: 300px
+    height: 295px
+    background: #f5f0dd
+    margin: 20px
+@media screen and (max-width: 1000px)
+  .feature__info
+    width: 95%
+    text-align: center
+  .products__menu
+    line-height: 5
+    .product__item
+      font-size: 26px
+@media screen and (max-width: 768px)
+  .products__menu
+    flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+  .products__menu .product__item
+    margin: auto

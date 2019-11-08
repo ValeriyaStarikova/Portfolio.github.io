@@ -1,0 +1,126 @@
+.header
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: #f6f2f2
+  padding-bottom: 120px
+  .header__nav
+    width: 1250px
+    height: 90px
+    background: #313030
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 30px
+    transition: height 1s ease-in-out
+  .nav__item
+    display: flex
+    align-items: center
+    height: 90px
+    padding-left: 24px
+    padding-right: 24px
+    text-decoration: none
+    text-transform: uppercase
+    color: #ffff
+    font-family: $OpenSans
+    font-size: 14px
+    font-weight: 400
+    width: auto
+    transition: height 1s ease-in-out
+  .nav__item:hover
+    background: #ff3f40
+  .header__content
+    width: 1250px
+    display: flex
+    justify-content: space-between
+  .text__content
+    width: 585px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    color: #000000
+    font-family: $OpenSans
+    h1
+      font-size: 70px
+      font-weight: 800
+      text-transform: uppercase
+      margin-top: 105px
+    p
+      width: 490px
+      font-size: 14px
+      font-weight: 400
+      margin-top: 35px
+  .video__content
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 516px
+    height: 350px
+    margin-top: 80px
+    background: #c4c0b1
+    box-shadow: 14px 14px 73px rgba(0,0,0,0.29)
+    .play__button
+      width: 70px
+      height: 70px
+      i
+        font-size: 70px
+        color: #ffffff
+      transition: 1s
+      transform: scale(1)
+      cursor: pointer
+    .play__button:hover
+      transition: 1s
+      transform: scale(2)
+      cursor: pointer
+.nav--active
+  display: flex!important
+@media screen and (max-width: 1260px)
+  .header .header__nav, .header .header__content
+    width: 85%
+  .header .text__content
+    width: 45%
+    h1
+      font-size: 50px
+    p
+      width: auto
+  .header .video__content
+    width: 416px
+    height: 250px
+@media screen and (max-width: 1024px)
+  .header .video__content
+    width: 316px
+  .header .text__content h1
+    font-size: 45px
+@media screen and (max-width: 900px)
+  .header .text__content h1
+    font-size: 35px
+@media screen and (max-width: 768px)
+  .header
+    .header__content
+      flex-direction: column-reverse
+    .text__content
+      width: 90%
+      margin: auto
+    .video__content
+      width: 90%
+      height: 350px
+      margin: auto
+      margin-top: 80px
+  .hidemenu__button
+    display: block
+  .header .header__content, .header .header__nav
+    flex-direction: column
+    height: auto
+    align-self: center
+  .header .nav__item:hover
+    width: 95%
+  .header .header__nav
+    display: none
+    margin-top: 60px
+  .header .nav__item
+    width: 100%
+    justify-content: center
+@media screen and (max-width: 425px)
+  .header .text__content h1
+    font-size: 30px
