@@ -1,0 +1,115 @@
+.offer__wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  background: url(../../img/offer.png) no-repeat
+  background-size: cover
+  padding-bottom: 48px
+  .offer__header
+    max-width: 1139px
+    width: 90%
+    padding-top: 45px
+    padding-bottom: 30px
+    font-size: 28px
+    font-weight: bold
+    text-transform: uppercase
+    color: #ffffff
+  .offer__content
+    max-width: 1139px
+    width: 90%
+    height: 131px
+    background: $offerBlockBg
+    display: flex
+    justify-content: center
+    align-items: center
+    .select
+      position: relative
+    select:invalid:not(:focus)
+      color: red
+    .offer__form
+      width: 100%
+      display: flex
+      justify-content: space-around
+      align-items: center
+      input,select
+        background: none
+        outline: none
+        border: none
+        border-bottom: 1px solid #ffffff
+        color: #ffffff
+        font-size: 18px
+        text-indent: 10px
+        padding-bottom: 7px
+      input:nth-child(1)
+        max-width: 140px
+      input:nth-child(2)
+        max-width: 190px
+      input:nth-child(3)
+        max-width: 150px
+      select
+        width: 180px
+        text-indent: 0
+        -webkit-appearance: none
+        appearance: none
+        option
+          color: #000000
+          font-size: 16px
+          font-family: inherit
+        option:hover
+          background: $mainColor!important
+          border: none
+          outline: none
+      .offer__submit
+        border-radius: 10px
+        background: $mainColor
+        padding-top: 24px
+        padding-bottom: 24px
+        padding-left: 29px
+        padding-right: 29px
+        font-size: 18px
+        text-align: center
+        vertical-align: middle
+        color: #000000
+    .select::before
+      content: ''
+      position: absolute
+      width: 16px
+      height: 8px
+      top: 8px
+      right: 4px
+      background: url(../../img/arrowSelect.png) no-repeat
+      background-size: contain
+      background-position: center
+#error
+  color: #ffffff
+  padding-bottom: 10px
+  text-align: center
+@media screen and (max-width: 1139px)
+  .offer__wrapper .offer__content
+    padding-top: 50px
+    padding-bottom: 50px
+  .offer__wrapper .offer__content .offer__form
+    align-items: center
+    flex-wrap: wrap
+  .offer__wrapper .offer__content .offer__form .offer__submit
+    margin-top: 30px
+    justify-content: center
+@media screen and (max-width: 800px)
+  .offer__wrapper .offer__content .offer__form input
+    max-width: none!important
+    flex-basis: 45%
+    display: flex
+    padding-top: 20px
+  .offer__wrapper .offer__content .offer__form .select
+    flex-basis: 45%
+    padding-top: 20px
+  .offer__wrapper .offer__content .offer__form select
+    width: 100%
+  .select::before
+    top: 50%
+@media screen and (max-width: 500px)
+  .offer__wrapper .offer__content .offer__form input
+    flex-basis: 90%
+  .offer__wrapper .offer__content
+    padding-top: 100px
+    padding-bottom: 100px

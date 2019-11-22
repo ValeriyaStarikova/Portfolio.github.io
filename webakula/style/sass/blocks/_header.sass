@@ -1,0 +1,213 @@
+.header
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  height: 738px
+  position: relative
+  z-index: 1
+  .header__top
+    width: 90%
+    display: flex
+    justify-content: space-around
+    z-index: 3
+  .header__logo
+    width: 100px
+    height: 90px
+    background: url(../../img/logo.png) no-repeat
+    background-size: contain
+    margin-top: 7px
+  .header__info
+    display: flex
+    flex-direction: column
+    align-items: center
+    .top__menu
+      width: 760px
+      height: 45px
+      background: $colorMenu
+      display: flex
+      align-items: center
+      border-radius: 10px
+      .menu
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: space-around
+        .menu__item
+          height: 100%
+          a
+            display: block
+            height: 100%
+            display: flex
+            align-items: center
+            font-size: 18px
+            font-weight: bold
+            color: #000000
+        .inner__menu
+          display: none
+          flex-direction: column
+          position: absolute
+          padding: 30px
+          padding-top: 25px
+          padding-bottom: 22px
+          margin-left: -30px
+          background: $bgInnerMenu
+          box-shadow: 0px 4px 15px 2px rgba(0,0,0,0.34)
+          a
+            display: block
+            max-width: 180px
+            font-size: 14px
+            color: #ffffff
+          li
+            margin-bottom: 20px
+          li:last-child
+            margin-bottom: 0
+      .menu__item:hover
+        .inner__menu
+          display: flex
+  .header__slider
+    height: 100%
+    width: 100%
+    position: absolute
+    flex-direction: column
+    display: flex
+    align-items: center
+  .slide__item
+    display: flex
+    align-items: flex-end
+    height: 735px
+  .slide1
+    background: url(../../img/slide1.png) no-repeat
+    background-size: cover
+  .slide2
+    background: url(../../img/slide2.png) no-repeat
+    background-size: cover
+  .slide3
+    background: url(../../img/slide1.png) no-repeat
+    background-size: cover
+  .slide__text
+    height: 228px
+    width: 74%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 13.5%
+    background: $slideTextColor
+    margin-bottom: 180px
+    h3
+      font-size: 30px
+      font-weight: bold
+      color: #ffffff
+    a
+      width: 254px
+      height: 48px
+      display: flex
+      margin-top: 43px
+      background: $mainColor
+      align-items: center
+      justify-content: center
+      color: #000000
+      font-size: 18px
+      border-radius: 10px
+      font-weight: bold
+.slick-dots
+  bottom: 30px
+  text-align: left
+  margin-left: 13.5%
+  li button:before
+    font-size: 15px
+    color: #b5cedf
+    opacity: 1
+  li.slick-active button:before
+    font-size: 15px
+    color: $mainColor
+    opacity: 1
+.top__info
+  width: 90%
+  height: 53px
+  display: flex
+  justify-content: space-between
+  align-self: flex-end
+  font-size: 14px
+  font-family: $FiraSans
+  color: $textHeaderColor
+  .tel,.place
+    display: flex
+    justify-content: center
+    align-items: center
+  .place::before
+    content: ''
+    width: 22px
+    height: 22px
+    background: url(../../img/icon/sprite.svg#location-pin) no-repeat
+    background-size: contain
+    background-position: center
+    margin-right: 10px
+  .tel::before
+    content: ''
+    width: 22px
+    height: 22px
+    background: url(../../img/icon/sprite.svg#telephone) no-repeat
+    background-size: contain
+    background-position: center
+    margin-right: 5px
+.soc
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-left: 63px
+  .soc__item:nth-child(1)
+    width: 22px
+    height: 22px
+    display: flex
+    background: url(../../img/icon/sprite.svg#facebook) no-repeat
+    background-size: contain
+    margin-right: 25px
+  .soc__item:nth-child(2)
+    width: 22px
+    height: 22px
+    display: flex
+    background: url(../../img/icon/sprite.svg#instagram-logo) no-repeat
+    background-size: contain
+.header__info--active
+  display: flex!important
+.slick-initialized .slick-slide
+  margin-right: 72px
+@media screen and (max-width: 992px)
+  .header .header__info .top__menu
+    height: auto
+  .header .header__info
+    display: none
+  .top__info
+    display: none
+  .header .header__top,.header .header__info .top__menu .menu
+    flex-direction: column
+  .header .header__info .top__menu .menu .inner__menu
+    position: relative
+    margin-left: 0
+    margin-top: 10px
+    padding-left: 0
+    padding-bottom: 0
+    background: none
+    box-shadow: none
+  .header .header__info .top__menu .menu .menu__item
+    padding-left: 20px
+    padding-bottom: 15px
+    display: flex
+    width: fit-content
+  .header .header__info .top__menu .menu .menu__item:first-child
+    padding-top: 20px
+  .arr,.arr--serv
+    position: inherit
+    margin-left: 10px
+  .hidemenu__button
+    display: flex
+  .header .header__info .top__menu
+    width: 80%
+@media screen and (max-width: 500px)
+  .header .header__info .top__menu,.header .slide__text
+    width: 100%
+  .header .slide__text h3
+    font-size: 25px
+  .owl-dots
+    margin-left: 200px

@@ -1,0 +1,128 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap')
+$FiraSans: 'Fira Sans', sans-serif
+
+
+/* colors */
+$colorMenu: #fbd341
+$textHeaderColor: #ffffff
+$bgInnerMenu: rgba(67, 154, 220, .8)
+$slideTextColor: rgba(0,76,132, .5)
+$mainColor: #fbd341
+$tourCardBg: #f8f7f7
+$offerBlockBg: rgba(0,0,0, .6)
+$bgFooter: #22334d
+
+
+/* main set */
+body,html
+  height: 100%
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  overflow-x: hidden
+  font-family: $FiraSans
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  width: 100%
+  margin: auto
+  overflow: hidden
+header
+  flex: 0 0 auto
+main
+  flex: 1 0 auto
+  overflow: hidden
+footer
+  flex: 0 0 auto
+ul,li,a
+  margin: 0
+  padding: 0
+  list-style: none
+  text-decoration: none
+p,h1,h2,h3
+  margin: 0
+  padding: 0
+.arr
+  width: 20px
+  height: 20px
+  top: 62px
+  margin-left: 55px
+  position: absolute
+.arr--serv
+  margin-left: 70px
+.arr::before,.arr::after
+  content: ''
+  display: block
+  width: 2px
+  height: 10px
+  background: #000000
+.arr::before
+  transform: rotate(50deg) translate(12px, 1px)
+.arr::after
+  transform: rotate(-50deg)
+.owl-theme .owl-nav
+  width: 100%
+  display: flex
+  justify-content: space-between
+  position: absolute
+  top: 80px
+  button
+    transform: scale(1.9)
+.owl-dots
+  position: absolute
+  bottom: 0
+  left: 0
+  margin-left: 390px
+  margin-bottom: 30px
+.owl-theme .owl-dots .owl-dot span
+  width: 15px
+  height: 14px
+  background: #b5d4e7
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+  background: $mainColor
+.owl-theme .owl-nav [class*=owl-]:hover
+  color: inherit
+  background: none
+.slick-prev:before
+  content: ' '
+  width: 16px
+  height: 8px
+  background: url(../../img/arrowSelect.png) no-repeat
+  background-size: cover
+.hidemenu__button
+  width: 30px
+  height: 30px
+  display: none
+  position: absolute
+  right: 20px
+  top: 20px
+  z-index: 99
+  cursor: pointer
+  span,span::before,
+  span::after
+    width: 30px
+    height: 2px
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    background-color: $mainColor
+    border-radius: 30px
+    transition: 0.5s
+  span::before,
+  span::after
+    content: ''
+  span::before
+    transform: translateY(-10px)
+  span::after
+    transform: translateY(10px)
+.hidemenu__button--active
+  span::before
+    background-color: #ff3f40
+    transform: rotate(45deg)
+  span::after
+    background-color: #ff3f40
+    transform: rotate(-45deg)
+  span
+    height: 0

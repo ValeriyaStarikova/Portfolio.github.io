@@ -1,0 +1,53 @@
+.advantage__wrapper
+  background: $tourCardBg
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-bottom: 77px
+  .advantage__header
+    width: 57%
+    padding-top: 45px
+    padding-bottom: 60px
+    font-size: 28px
+    font-weight: bold
+    text-transform: uppercase
+  .advantage__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 1139px
+    .content__img
+      max-width: 458px
+      width: 38%
+      height: 316px
+      background: url(../../img/advantage.png) no-repeat
+      background-size: cover
+      background-position: center
+    .content__text
+      width: 50%
+      height: 193px
+      font-size: 16px
+      overflow-y: scroll
+      padding-right: 50px
+      line-height: 23px
+    .content__text::-webkit-scrollbar
+      width: 1px
+    .content__text::-webkit-scrollbar-track
+      background: #efefef
+    .content__text::-webkit-scrollbar-thumb
+      width: 15px
+      height: 15px
+      border-radius: 100px
+      background: $mainColor
+@media screen and (max-width: 1200px)
+  .advantage__wrapper .advantage__content
+    margin-left: 20px
+    margin-right: 20px
+@media screen and (max-width: 600px)
+  .advantage__wrapper .advantage__content
+    flex-direction: column
+    .content__img
+      width: 100%
+      margin-bottom: 30px
+    .content__text
+      width: 77%
