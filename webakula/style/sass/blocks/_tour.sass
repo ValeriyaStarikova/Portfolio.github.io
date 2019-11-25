@@ -7,7 +7,7 @@
     margin-right: 45px
   .tours__content
     max-width: 1800px
-    width: 97%
+    width: 90%
     min-height: 202px
     display: flex
     justify-content: center
@@ -89,29 +89,37 @@
           top: 3px
           left: 5px
           position: absolute!important
-.arr--right
-  right: -17px
-  top: 43%
-  transform: rotate(-90deg)
-.arr--left
-  left: -70px
-  top: 43%
-  transform: rotate(90deg)
-@media screen and (max-width: 1770px)
-  .slick-initialized .slick-slide
-    margin-right: 32px
+.tour_wrapper
+  .owl-carousel.owl-drag .owl-item
+    margin: auto
+  .owl-carousel .owl-nav button.owl-next
+    margin-right: -35px
+  .owl-carousel .owl-nav button.owl-prev
+    margin-left: -35px
+  .owl-carousel button.owl-dot
+     display: none
+@media screen and (max-width: 1500px)
+  .tour
+    max-width: 300px
+    flex-direction: column
+    margin: auto
+  .tour .tour__img
+    margin: 15px
+  .tour .tour__ifno
+    width: 90%
+    margin-bottom: 20px
+  .owl-theme .owl-nav
+    top: 50%
 @media screen and (max-width: 1000px)
   .tour_wrapper
     .arr--right
       right: 5px
     .arr--left
       left: -5px
-@media screen and (max-width: 700px)
-  .tour
-    max-width: 300px
-    flex-direction: column
-  .tour .tour__img
-    margin: 15px
-  .tour .tour__ifno
-    width: 90%
-    margin-bottom: 20px
+  .tour_wrapper .tours__content
+    width: 80%
+@media screen and (max-width: 375px)
+  .tour_wrapper .owl-carousel .owl-nav button.owl-next
+    margin-right: -22px
+  .tour_wrapper .owl-carousel .owl-nav button.owl-prev
+    margin-left: -22px

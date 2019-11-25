@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>КуражТур</title>
 
-  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css"/>
+  <link rel="stylesheet" href="style/jquery.mCustomScrollbar.min.css">
   <link rel="stylesheet" href="owlcarusel/dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="owlcarusel/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="style/css/customSelect.css">
   <link rel="stylesheet" href="style/css/style.css">
 </head>
 <body>
@@ -53,29 +53,32 @@
           </ul>
         </div>
       </div>
+      <div class="hidemenu__button">
+          <span></span>
+      </div>
     </div>
     <div id="header__slider"class="header__slider owl-carousel owl-theme">
       <div class="slide__item slide1">
+        <img src="img/slide2.png" alt="">
         <div class="slide__text">
           <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
           <a href="#">Получить предложение</a>
         </div>
       </div>
       <div class="slide__item slide2">
+        <img src="img/slide1.png" alt="">
         <div class="slide__text">
           <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
           <a href="#">Получить предложение</a>
         </div>
       </div>
       <div class="slide__item slide3">
+        <img src="img/slide2.png" alt="">
         <div class="slide__text">
           <h3>Лучшие предложения по солнечному Египту из Харькова</h3>
           <a href="#">Получить предложение</a>
         </div>
       </div>
-    </div>
-    <div class="hidemenu__button">
-        <span></span>
     </div>
   </header>
   <main>
@@ -84,7 +87,7 @@
           <a href="#" class="tour__item">Горящие туры</a>
           <a href="#" class="tour__item">Популярные туры</a>
         </nav>
-        <div id="hot__tour"class="tours__content">
+        <div id="hot__tour"class="tours__content owl-carousel owl-theme">
           <div class="tour">
             <div class="tour__img"></div>
             <div class="tour__ifno">
@@ -296,13 +299,13 @@
       <div class="offer__wrapper">
         <h3 class="offer__header">Хочу получить предложение</h3>
         <div id="error"></div>
-        <div class="offer__content">
+        <div id="offerContent" class="offer__content">
           <form id="offer__form" class="offer__form" action="index.html" method="GET">
             <input type="text" id="name" name="name" placeholder="Имя">
             <input type="email" id="email" name="email" placeholder="Email">
             <input type="tel" id="tel" name="tel" placeholder="Телефон">
-            <div class="select">
-              <select class="select__cantry" name="" id="select">
+            <div class="custom-select" style="width:180px;">
+             <select id="select">
                 <option value="" disabled selected>Страна тура</option>
                 <div class="s__item"><option value="Турция">Турция</option></div>
                 <option value="Египет">Египет</option>
@@ -362,8 +365,9 @@
 </div>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-   <script type="text/javascript" src="slick-1.8.1/slick/slick.js"></script>
+  <script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script type="text/javascript" src="owlcarusel/dist/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/customSelect.js"></script>
   <script type="text/javascript" src="js/valid.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
 

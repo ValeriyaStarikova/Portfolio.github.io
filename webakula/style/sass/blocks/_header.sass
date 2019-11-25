@@ -47,6 +47,8 @@
           display: none
           flex-direction: column
           position: absolute
+          max-height: 300px
+          overflow-y: scroll
           padding: 30px
           padding-top: 25px
           padding-bottom: 22px
@@ -69,31 +71,30 @@
     height: 100%
     width: 100%
     position: absolute
-    flex-direction: column
     display: flex
-    align-items: center
   .slide__item
     display: flex
     align-items: flex-end
     height: 735px
-  .slide1
+  //.slide1
     background: url(../../img/slide1.png) no-repeat
     background-size: cover
-  .slide2
+  //.slide2
     background: url(../../img/slide2.png) no-repeat
     background-size: cover
-  .slide3
+  //.slide3
     background: url(../../img/slide1.png) no-repeat
     background-size: cover
   .slide__text
     height: 228px
     width: 74%
     display: flex
+    position: absolute
     flex-direction: column
     justify-content: center
     padding-left: 13.5%
     background: $slideTextColor
-    margin-bottom: 180px
+    bottom: 180px
     h3
       font-size: 30px
       font-weight: bold
@@ -110,18 +111,10 @@
       font-size: 18px
       border-radius: 10px
       font-weight: bold
-.slick-dots
-  bottom: 30px
-  text-align: left
-  margin-left: 13.5%
-  li button:before
-    font-size: 15px
-    color: #b5cedf
-    opacity: 1
-  li.slick-active button:before
-    font-size: 15px
-    color: $mainColor
-    opacity: 1
+.owl-carousel .owl-item img
+  width: 100%
+  object-fit: cover
+  height: 100%
 .top__info
   width: 90%
   height: 53px
@@ -208,6 +201,6 @@
   .header .header__info .top__menu,.header .slide__text
     width: 100%
   .header .slide__text h3
-    font-size: 25px
+    font-size: 22px
   .owl-dots
     margin-left: 200px

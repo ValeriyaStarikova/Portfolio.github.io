@@ -5,50 +5,40 @@ $(document).ready(function(){
     $('.hidemenu__button').toggleClass('hidemenu__button--active');
     $('.header__info').toggleClass('header__info--active');
   });
-  $("#header__slider").owlCarousel({
+  $(".header__slider").owlCarousel({
     items: 1,
     loop: true,
+    center: true,
     doots: true
   });
-  $('.tours__content').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    variableWidth: true,
-    speed: 500,
-    arrows: true,
-    nextArrow: '<span class="arr arr--right"></span>',
-    prevArrow: '<span class="arr arr--left"></span>',
-    cssEase: 'linear',
-    responsive: [
-    {
-      breakpoint: 1900,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '20px'
-      }
-    },
-    {
-      breakpoint: 1700,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        centerMode: true,
-        centerPadding: '60px'
-      }
-    },
-    {
-      breakpoint: 1000,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
+  $(".tours__content").owlCarousel({
+    loop: true,
+    nav: true,
+    doots: false,
+    responsive:{
+      0:{
+        items:1
+      },
+      600:{
+        items:2,
+        margin:20
+      },
+      1000:{
+        items:3,
+        margin:10,
+        center: true
       }
     }
-  ]
   });
+
+  (function($){
+          $(window).on("load",function(){
+              $(".content__text").mCustomScrollbar({
+                theme: "rounded-dark"
+              });
+          });
+      })(jQuery);
+
   $('.tours__content').not(":first").hide();
 
   $('.tour_wrapper .tour__item').click(function(e) {

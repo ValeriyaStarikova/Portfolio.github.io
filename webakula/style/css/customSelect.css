@@ -1,0 +1,66 @@
+.custom-select {
+  position: relative;
+  font-family: inherit;
+  border-bottom: 1px solid #ffff;
+  padding-bottom: 9px;
+  box-sizing: border-box;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: transparent;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: '';
+  width: 16px;
+  height: 8px;
+  top: 8px;
+  right: 4px;
+  background: url(../../img/arrowSelect.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  cursor: pointer;
+  user-select: none;
+  padding-top: 0px;
+  padding-bottom: 1px solid #ffff;
+}
+.select-items div{
+  color: #000000;
+  padding-bottom: 15px;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  color: #000000;
+  background: #ffffff;
+  font-size: 16px;
+  padding-left: 19px;
+  padding-top: 15px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}

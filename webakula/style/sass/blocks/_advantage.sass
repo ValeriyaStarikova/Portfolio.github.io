@@ -27,18 +27,12 @@
       width: 50%
       height: 193px
       font-size: 16px
-      overflow-y: scroll
       padding-right: 50px
       line-height: 23px
-    .content__text::-webkit-scrollbar
-      width: 1px
-    .content__text::-webkit-scrollbar-track
-      background: #efefef
-    .content__text::-webkit-scrollbar-thumb
-      width: 15px
-      height: 15px
-      border-radius: 100px
-      background: $mainColor
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar, .mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar
+  background-color: $mainColor
 @media screen and (max-width: 1200px)
   .advantage__wrapper .advantage__content
     margin-left: 20px
@@ -50,4 +44,5 @@
       width: 100%
       margin-bottom: 30px
     .content__text
-      width: 77%
+      width: 90%
+      padding: 0
