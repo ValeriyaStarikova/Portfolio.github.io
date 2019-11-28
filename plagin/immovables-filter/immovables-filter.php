@@ -4,11 +4,8 @@
  *
  * Network:     true
  */
-
 add_action( 'init', 'im_custom_post_property' );
-
 function im_custom_post_property() {
-
 	register_taxonomy( 'Region', [ 'post' ], [
 		'label'                 => '',
 		'labels'                => [
@@ -52,14 +49,11 @@ function im_custom_post_property() {
 	 foreach( $GLOBALS['my_query_filters'] as $key => $name ){
 			if(isset($_GET[$name]))
 			{
-
 		    	$query->set('meta_key', $name);
 					$query->set('meta_value', $_GET[$name]);
-
 			}
 		}
 	}
-
   // Set the labels, this variable is used in the $args array
   $labels = array(
     'name'               => __( 'Immovables' ),
@@ -74,7 +68,6 @@ function im_custom_post_property() {
     'featured_image'     => 'Photo',
     'set_featured_image' => 'Add Photo'
   );
-
   $args = array(
     'labels'            => $labels,
     'description'       => ' ',
@@ -88,22 +81,16 @@ function im_custom_post_property() {
     'query_var'         => 'object',
     'taxonomies'        => array( 'Region' ),
   );
-
-
   register_post_type( 'immovables', $args);
 }
-
 add_action( 'pre_get_posts', 'add_immovables_to_frontpage' );
-
 function add_immovables_to_frontpage( $query ) {
     if ( is_home() && $query->is_main_query() ) {
         $query->set( 'post_type', array( 'object-immovables' ) );
     }
     return $query;
 }
-
 if( function_exists('acf_add_local_field_group') ):
-
 acf_add_local_field_group(array(
 	'key' => 'group_5dcc72654ecdb',
 	'title' => 'объект недвижимости',
@@ -258,7 +245,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
 acf_add_local_field_group(array(
 	'key' => 'group_5dcc78383d30d',
 	'title' => 'помещение',
@@ -405,5 +391,40 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-
 endif;
+function imm() {
+	foreach( $GLOBALS['my_query_filters'] as $key => $name ){
+			$field = get_field_object($name);
+			$values = explode(',',$_GET[$name]);
+			?>
+			<div class="filter__item">
+			<span><?php echo $field['label'];?></span>
+			<select>
+				<?php foreach ($field['choices'] as $choice_value => $choice_label) : ?>
+					<option label="<?php echo $choice_label; ?>" value="<?php echo $choice_value; ?>"
+						<?php if(in_array($choice_value,$values)) : ?>
+							selected="selected"<?php endif;?>><?php echo $field['name']; ?>
+					</option>
+				<?php
+			endforeach;?>
+		</select></div>
+<?php }?>
+<script type="text/javascript">
+(function($) {
+	$('#search select').on('change', function(){
+		var $select = $(this).closest('select'),
+				vals = [],
+				text = [];
+		$select.find('option:selected').each(function() {
+			text.push($(this).text());
+			vals.push($(this).val());
+			console.log($select.find('option:selected'));
+		});
+		vals = vals.join(",");
+		window.location.replace('<?php echo home_url('immovables');?>?' + text + '=' + vals);
+	});
+})(jQuery);
+</script>
+<?php return;
+}
+add_shortcode( 'imm', 'imm' );
