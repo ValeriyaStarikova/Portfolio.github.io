@@ -4,6 +4,46 @@
  *
  * Network:     true
  */
+
+$GLOBALS['my_query_filters'] = array(
+		'field_1'	=> 'number_of_floors',
+		'field_2'	=> 'build_type',
+		'field_3'	=> 'number_room',
+		'field_4'	=> 'balcony',
+		'field_5'	=> 'bathroom'
+	);
+	add_action('pre_get_posts','my_pre_get_posts');
+	function my_pre_get_posts( $query ){
+
+	if( is_admin() ) return;
+
+	if( !$query->is_main_query() ) return;
+	
+	$meta_query = $query->get('meta_query');
+
+	foreach( $GLOBALS['my_query_filters'] as $key => $name ) {
+	
+		if( empty($_GET[ $name ]) ) {
+			
+			continue;
+			
+		}
+		
+		
+		
+		$value = explode(',', $_GET[ $name ]);
+	
+    	$meta_query = [
+            ['key'		=> $name,
+            'value'		=> $value,
+            'compare'	=> 'IN',],
+        ];
+        
+	} 
+	
+	$query->set('meta_query', $meta_query);
+	}
+
 add_action( 'init', 'im_custom_post_property' );
 function im_custom_post_property() {
 	register_taxonomy( 'Region', [ 'post' ], [
@@ -32,28 +72,7 @@ function im_custom_post_property() {
 		'show_in_rest'          => null,
 		'rest_base'             => null,
 	] );
-	$GLOBALS['my_query_filters'] = array(
-		'field_1'	=> 'number_of_floors',
-		'field_2'	=> 'build_type',
-		'field_3'	=> 'number_room',
-		'field_4'	=> 'balcony',
-		'field_5'	=> 'bathroom'
-	);
-	add_action('pre_get_posts','my_pre_get_posts');
-	function my_pre_get_posts( $query ){
-		if(is_admin())
-		{
-			return;
-		}
-		$meta_query = $query->get('meta_query');
-	 foreach( $GLOBALS['my_query_filters'] as $key => $name ){
-			if(isset($_GET[$name]))
-			{
-		    	$query->set('meta_key', $name);
-					$query->set('meta_value', $_GET[$name]);
-			}
-		}
-	}
+	
   // Set the labels, this variable is used in the $args array
   $labels = array(
     'name'               => __( 'Immovables' ),
@@ -392,6 +411,8 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 endif;
+
+
 function imm() {
 	foreach( $GLOBALS['my_query_filters'] as $key => $name ){
 			$field = get_field_object($name);
@@ -421,7 +442,7 @@ function imm() {
 			console.log($select.find('option:selected'));
 		});
 		vals = vals.join(",");
-		window.location.replace('<?php echo home_url('immovables');?>?' + text + '=' + vals);
+	window.location.replace('<?php echo home_url('immovables');?>?' + text + '=' + vals);
 	});
 })(jQuery);
 </script>
