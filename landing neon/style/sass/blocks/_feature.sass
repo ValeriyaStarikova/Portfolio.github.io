@@ -1,0 +1,152 @@
+.feature
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 1250px
+  padding-bottom: 150px
+  margin: auto
+  .feature__content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    width: 100%
+    margin: auto
+  .feature__img
+    width: 100%
+    height: 100%
+    background: url(../../img/work.png) no-repeat
+    background-position: center
+    background-size: cover
+    border-radius: 100%
+  .feature__text
+    position: absolute
+    color: #ffff
+    margin-top: 186px
+    font-size: 23px
+    text-align: center
+  .content__item
+    position: relative
+    width: 242px
+    height: 242px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 2%
+  .content__item span:nth-child(1)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 2px solid #01d1ff
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%
+    transition: 0.5s
+    box-shadow: 0 0 10px #97d5dd
+    animation: animate1 6s linear infinite
+  .content__item span:nth-child(2)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 2px solid #01d1ff
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%
+    transition: 0.5s
+    box-shadow: 0 0 10px #97d5dd
+    animation: animate2 4s linear infinite
+  .content__item span:nth-child(3)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 2px solid #01d1ff
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%
+    transition: 0.5s
+    box-shadow: 0 0 10px #97d5dd
+    animation: animate1 10s linear infinite
+  .feature__wrap
+    margin-top: 200px
+    text-align: center
+    h2
+      color: #ffffff
+      font-size: 80px
+      text-transform: uppercase
+      font-weight: 100
+      span:nth-child(1)
+        text-shadow: 0 0 10px #9c7604, 0 0 20px #FFEB3B
+        color: #fde134
+      span:nth-child(2)
+        text-shadow: 0 0 10px #a84768, 0 0 20px #fb36ca
+        color: #fb36ca
+      span:nth-child(3)
+        text-shadow: 0 0 10px #2196F3, 0 0 20px #00d0ff
+        color: #00d0ff
+      span:nth-child(4)
+        text-shadow: 0 0 10px #009688, 0 0 20px #03be52
+        color: #03be52
+      span:nth-child(5)
+        text-shadow: 0 0 10px #872d0d, 0 0 20px #fa642f
+        color: #fa642f
+      span:nth-child(6)
+        text-shadow: 0 0 10px #810023, 0 0 20px #d01447
+        color: #d01447
+    p
+      color: #ffff
+      font-size: 20px
+      margin-top: 20px
+.h__text--feature
+  color: #fd6830
+  text-shadow: 0 0 38px #f9a07e
+  align-self: flex-start
+@keyframes animate1
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+@keyframes animate2
+  0%
+    transform: rotate(360deg)
+  100%
+    transform: rotate(0deg)
+@media screen and (max-width: 1325px)
+  .feature
+    width: 97%
+@media screen and (max-width: 1190px)
+  .feature .content__item
+    margin: 6%
+@media screen and (max-width: 1000px)
+  .feature__info
+    width: 95%
+    text-align: center
+  .products__menu
+    line-height: 5
+    .product__item
+      font-size: 26px
+  .feature .content__item
+    margin: 8%
+@media screen and (max-width: 768px)
+  .products__menu
+    flex-direction: column
+    display: flex
+    justify-content: center
+    align-items: center
+  .products__menu .product__item
+    margin: auto
+  .feature .content__item
+    margin: 6%
+    margin-top: 18%
+@media screen and (max-width: 525px)
+  .feature .content__item
+    margin-top: 27%
+  .feature .content__item:first-child
+    margin-top: 0
+@media screen and (max-width: 450px)
+  .feature .feature__wrap h2
+    font-size: 60px
+  .feature .feature__wrap p
+    font-size: 12px
+@media screen and (max-width: 337px)
+  .feature .feature__wrap h2
+    font-size: 50px

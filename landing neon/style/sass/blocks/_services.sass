@@ -1,0 +1,104 @@
+.services
+  display: flex
+  flex-direction: column
+  padding-top: 119px
+  padding-bottom: 61px
+  .services__img
+    width: 70%
+    height: 300px
+    background: url(../../img/imgservises.png) no-repeat
+    background-position: center
+    background-size: cover
+    border: 5px solid #01d1ff
+    border-radius: 10px
+    box-shadow: 0 0 10px #97d5dd
+    margin-bottom: 78px
+  .h__text--services
+    color: #c964b2
+    text-shadow: 0 0 38px #c93063c7, 0 0 20px #c93063c7
+  .border__img
+    width: 100%
+    height: 100%
+    border: 3px solid #c74223
+    border-radius: 10px
+    transform: rotate(6deg)
+  .services__content
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    .content__item
+      width: 250px
+      height: 250px
+      border: 5px solid #01d1ff
+      border-radius: 10px
+      box-shadow: 0 0 10px #97d5dd
+      margin: 5%
+      background: url(../../img/work.png) no-repeat
+      background-position: center
+      background-size: cover
+    .border__overlay
+      width: 320px
+      height: 250px
+      border: 3px solid #c74223
+      border-radius: 10px
+      transform: rotate(-6deg) translateX(-32px)
+@media screen and (max-width: 1024px)
+  .services
+    .info__services
+      width: 35%
+    .block__services
+      width: 50%
+    .block__services
+      .item__services
+        width: 45%
+@media screen and (max-width: 1325px)
+  .main__wrapper
+    width: 97%
+  .services
+    .info__services
+      width: 35%
+    .block__services
+      width: 50%
+      .item__services
+        width: 47%
+@media screen and (max-width: 1150px)
+  .services .services__content .content__item
+    margin: 9%
+@media screen and (max-width: 1000px)
+  .services .services__img
+    width: 95%
+    margin: auto
+@media screen and (max-width: 900px)
+  .services
+    .block__services
+      .item__services
+        width: 90%
+@media screen and (max-width: 768px)
+  .services
+    padding-top: 0
+    .block__services
+      width: 100%
+      justify-content: center
+      margin: auto
+      .item__services
+        align-items: center
+        text-align: center
+    .info__services
+      width: 100%
+      text-align: center
+      align-items: center
+      margin-top: 50px
+  .services .services__img
+    background-position: left
+    width: 85%
+  .services .services__img
+    margin-bottom: 50px
+@media screen and (max-width: 525px)
+  .services .services__img
+    height: 173px
+@media screen and (max-width: 375px)
+  .services .services__content .border__overlay
+    display: none
+  .services .services__img
+    width: 90%

@@ -1,0 +1,66 @@
+.portfolio
+  display: flex
+  align-items: center
+  flex-direction: column
+  width: 1250px
+  padding-bottom: 150px
+  margin: auto
+  .portfolio__content
+    margin: auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  .portfolio__item
+    position: relative
+    width: 300px
+    height: 400px
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #060c21
+    margin: 3%
+  .portfolio__img
+    width: 100%
+    height: 100%
+    background: url(../../img/heart.jpg) no-repeat
+    background-position: center
+    background-size: cover
+    z-index: 1
+  .h__text--portfolio
+    color: #00a9c1
+    text-shadow: 0 0 38px #2f9aca, 0 0 20px #2e8cb7
+  .portfolio__item::before
+    content: ''
+    position: absolute
+    top: -2px
+    left: -2px
+    right: -2px
+    bottom: -2px
+    background: #ffff
+    z-index: 0
+  .portfolio__item::after
+    content: ''
+    position: absolute
+    top: -2px
+    left: -2px
+    right: -2px
+    bottom: -2px
+    background: #ffff
+    z-index: 0
+    filter: blur(10px)
+  .portfolio__item::before,.portfolio__item::after
+    background: linear-gradient(235deg,#89ff00,#060c21,#00bcd4)
+@media screen and (max-width: 1325px)
+  .portfolio
+    width: 97%
+@media screen and (min-width: 1200px)
+  .portfolio .portfolio__item
+    margin: 4%
+@media screen and (max-width: 900px)
+  .portfolio .portfolio__item
+    margin: 6%
+@media screen and (max-width: 768px)
+  .portfolio .portfolio__item
+    margin-top: 9%
+  .portfolio .portfolio__item:first-child
+    margin-top: 10px

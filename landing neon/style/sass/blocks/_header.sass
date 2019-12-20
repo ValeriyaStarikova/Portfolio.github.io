@@ -1,0 +1,218 @@
+.header
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background: #000000
+  padding-bottom: 120px
+  .header__nav
+    width: 1250px
+    height: 90px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 30px
+    transition: height 1s ease-in-out
+    position: absolute
+    z-index: 2
+  .nav__item
+    display: flex
+    align-items: center
+    height: 90px
+    padding-left: 24px
+    padding-right: 24px
+    text-decoration: none
+    text-transform: uppercase
+    color: #ffff
+    font-family: $OpenSans
+    font-size: 14px
+    font-weight: 400
+    width: auto
+    transition: height 1s ease-in-out
+  .header__top
+    position: relative
+    width: 1250px
+    height: 90px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 30px
+  .header__logo::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #00adff
+    z-index: 1
+    mix-blend-mode: color
+    animation: animate 10s linear infinite
+  .header__logo
+    width: 250px
+    height: 50px
+    position: absolute
+    left: 0
+    align-self: flex-end
+  .header__logo h1
+    color: #c5dbff
+    left: 9px
+    align-self: flex-end
+    position: absolute
+    font-weight: 100
+    filter: blur(1px)
+    text-shadow: 0 0 10px rgba(255,255,255,1), 0 0 20px rgba(255,255,255,1)
+  .header__content
+    width: 1250px
+    display: flex
+    justify-content: space-between
+    position: relative
+  .text__content
+    width: 585px
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    color: #000000
+    font-family: $OpenSans
+    z-index: 2
+    h2
+      font-size: 50px
+      font-weight: 800
+      text-transform: uppercase
+      margin-top: 105px
+      color: #ffffff
+  .img__content
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 513px
+    height: 513px
+    position: relative
+    border-radius: 100%
+    background: url(../../img/headerimg.png) no-repeat
+    background-position: center
+    background-size: cover
+    box-shadow: 14px 14px 73px rgba(0,0,0,0.29)
+    transform: scale(1.5)
+.nav--active
+  display: flex!important
+.header__sw
+  display: flex
+  width: 175px
+  align-self: flex-end
+  justify-content: center
+  position: absolute
+  right: 8%
+  bottom: 15px
+.lang__wrap
+  display: flex
+  width: 67%
+  justify-content: space-around
+.lang
+  position: relative
+  width: 35px
+  height: 35px
+  cursor: pointer
+  border-radius: 50%
+  .b
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #000000
+    border-radius: 50%
+    box-shadow: 0 3px 4px rgba(0,0,0,1), inset 0 -2px 5px rgba(0,0,0,1), inset 0 -2px 5px rgba(255,255,255,0.5),0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #080808
+  .text
+    position: absolute
+    display: block
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    font-size: 16px
+    color: #ffffff
+.lang--active
+  width: 30px
+  height: 30px
+  .text
+    color: #01d1ff
+    text-shadow: 0 0 15px #01d1ff,0 0 30px #01d1ff
+  .b
+    box-shadow: 0 0px 0px rgba(0,0,0,1), inset 0 -2px 5px rgba(0,0,0,1), inset 0 1px 1px rgba(255,255,255,0.1),0 0 0 2px #000, 0 0 0 5px #0c0c0c, 0 0 0 5.5px #00a1ff
+
+@keyframes animate
+  0%
+    filter: hue-rotate(0deg)
+  100%
+    filter: hue-rotate(360deg)
+@media screen and (max-width: 1260px)
+  .header .header__nav, .header .header__content,.header .header__top
+    width: 85%
+  .header .text__content
+    width: 45%
+    h2
+      font-size: 50px
+  .header .video__content
+    width: 416px
+    height: 250px
+@media screen and (max-width: 1024px)
+  .header .video__content
+    width: 316px
+  .header .text__content h2
+    font-size: 45px
+@media screen and (max-width: 900px)
+  .header .img__content
+    transform: scale(1)
+  .header .text__content h2
+    font-size: 35px
+  .header .header__logo
+    align-self: baseline
+@media screen and (max-width: 768px)
+  .header
+    .header__content
+      flex-direction: column-reverse
+    .text__content
+      width: 90%
+      margin: auto
+      text-align: center
+    .button
+      align-self: center
+    .video__content
+      width: 90%
+      height: 350px
+      margin: auto
+      margin-top: 80px
+    .nav__item:hover
+      background: #2d0733
+  .hidemenu__button
+    display: block
+  .header .img__content
+    align-self: center
+  .header .header__content, .header .header__nav
+    flex-direction: column
+    height: auto
+    align-self: center
+  .header .nav__item:hover
+    width: 91%
+  .header .header__nav
+    display: none
+    margin-top: 60px
+    background: #2d0733c9
+    z-index: 555
+  .header .nav__item
+    width: 100%
+    justify-content: center
+  .header .header__logo
+    align-self: flex-end
+  .header__sw
+    bottom: -50px
+@media screen and (max-width: 715px)
+  .header .header__content, .header .header__nav, .header .header__top
+    justify-content: center
+@media screen and (max-width: 425px)
+  .header .text__content h2
+    font-size: 30px
+  .header .img__content
+    width: 313px
+    height: 313px

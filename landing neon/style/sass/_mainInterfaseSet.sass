@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap')
+
+$header-bg: #f5f6f8
+$OpenSans: 'Open Sans', sans-serif
+
+
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  overflow-x: hidden
+  font-family: $OpenSans
+.wrapper
+  width: 100%
+  margin: auto
+  overflow: hidden
+  background: #000000
+main
+  overflow: hidden
+hr
+  border: none
+a
+  text-decoration: none
+h1,h2,h3,h6,p,a
+  margin: 0
+  padding: 0
+.main__wrapper
+  width: 1250px
+  margin: auto
+.h__text
+  font-size: 45px
+  align-self: flex-end
+  text-transform: uppercase
+  margin-bottom: 70px
+  margin-top: 30px
+  font-weight: 100
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 227px
+  height: 55px
+  margin-top: 65px
+  background: #f935cc
+  color: #ffffff
+  font-size: 18px
+  font-weight: bold
+  outline: none
+  border: none
+  border-radius: 5px
+  cursor: pointer
+  transition: 0.5s
+.button:hover
+  cursor: pointer
+  transition: 0.5s
+  box-shadow:  0 0 35px #dd68c2
+.hidemenu__button
+  width: 30px
+  height: 30px
+  display: none
+  position: absolute
+  right: 20px
+  top: 20px
+  z-index: 999
+  cursor: pointer
+  span,span::before,
+  span::after
+    width: 30px
+    height: 2px
+    position: absolute
+    top: 50%
+    margin-top: -1px
+    background-color: #fddb08
+    border-radius: 30px
+    transition: 0.5s
+    box-shadow: 0 0 10px #fff
+  span::before,
+  span::after
+    content: ''
+  span::before
+    transform: translateY(-10px)
+  span::after
+    transform: translateY(10px)
+.hidemenu__button--active
+  span::before
+    background-color: #fddb08
+    transform: rotate(45deg)
+  span::after
+    background-color: #fddb08
+    transform: rotate(-45deg)
+  span
+    height: 0
+@media screen and (max-width: 950px)
+  .h__text,.h__text--feature
+    align-self: center!important
+    text-align: center!important
